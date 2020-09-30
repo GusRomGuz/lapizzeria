@@ -6,3 +6,5 @@
     <?php the_content(); ?>
 
 <?php endwhile ?>
+
+<?php get_footer(); ?>
