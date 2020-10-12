@@ -39,7 +39,7 @@ body {
     line-height: 2;
 }
 p {
-    font-size: 1.8rem;
+    font-size: 1rem;
     line-height: 5rem;
 }
 h1,h2,h3,h4 {
@@ -51,6 +51,8 @@ h1 {
 }
 h2 {
     font-size: 4rem;
+    text-align: center;
+    color: var (--rojo);
 }
 h3 {
     font-size: 3rem;
@@ -85,7 +87,7 @@ img {
 .site-header {
     padding-top: 3rem;
 }
-@media (min-width:760px){
+@media (min-width:768px){
     .site-header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -102,7 +104,7 @@ img {
     width: 80%;
     max-width: 30rem;
 }
-@@media (min-width: 760px){
+@media (min-width: 760px){
     .informacion-header {
         grid-column: 3 / 4;
     }
@@ -114,9 +116,46 @@ img {
     margin: 0;
     text-align: center;
 }
-@media (min-width: 760px) {
+@media (min-width: 768px) {
     .direccion p {
         text-align: right;
-        line-height: 1.4;
+        line-height: 1.5;
     }
 }
+
+/** Menu Escritorio **/
+@media (min-width: 768px) {
+  .slicknav_menu{
+      display: none;
+  }
+  .menu-principal  {
+      border-top: 1px solid var(--grisClaro);
+      margin-top: 3rem;
+  }
+  .menu-sitio .menu {
+      display: flex;
+      justify-content: space-between;
+  }
+  .menu-sitio .menu li {
+    flex: 1;
+  }
+  .menu-sitio .menu li .current_page_item a  {
+    border-bottom: .5rem solid var(--rojo);
+  }
+  .menu-sitio .menu li:hover {
+      background-color: var(--naranja);
+  }
+  .menu-sitio .menu a {
+      font-family: var (--fuenteHeadings);
+      text-transform: uppercase;
+      color: var(--negro);
+      padding: 1rem;
+      display: block;
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: center;
+  }
+
+}
+
+/** Menu Responsive **/
