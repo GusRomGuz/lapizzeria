@@ -9,6 +9,8 @@
   <body>
 
 <header class="site-header contenedor">
+    <div class="contenedor">
+
     <div class="logo">
         <a href="<?php echo esc_url( home_url('/')); ?>"> <!-- Link logo a elnace principal -->
           <img src="<?php echo get_template_directory_uri() ?>/img/logo.svg">
@@ -17,7 +19,16 @@
 
     <div class="informacion-header">
         <div class="redes-sociales">
-            <!-- TODO Agregar menu -->
+            <?php
+                  $args = array(
+                      'theme_location' => 'redes-sociales',
+                      'container' => 'nav',
+                      'container_class' => 'sociales',
+                      'link_before' => '<span class="sr-text">',
+                      'link_after' => '</span>'
+                  );
+                  wp_nav_menu($args);
+            ?>
         </div> <!--.redes-sociales -->
 
         <div class="direccion">
@@ -25,6 +36,9 @@
           <p>Teléfono: 378783....</p>
         </div>
     </div> <!--.informacion-header -->
+
+  </div>
+
 
 </header>
 

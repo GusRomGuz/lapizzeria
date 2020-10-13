@@ -1,4 +1,6 @@
 jQuery(document).ready( $ => {
     // Menu responsive
-    $('#menu ul').slicknav();
-});    
+    $('#menu ul').slicknav({
+        appendTo: $('.site-header')  /**menu en el header**/
+    });
+});
