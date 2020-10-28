@@ -51,7 +51,7 @@ h1 {
 h2 {
     font-size: 4rem;
     text-align: center;
-    color: var (--rojo);
+    color: var(--rojo);
 }
 h3 {
     font-size: 3rem;
@@ -102,7 +102,7 @@ img {
     text-align: center;
     font-size: 1.4rem;
     font-weight: 700;
-    font-family: var (--fuenteHeadings);
+    font-family: var(--fuenteHeadings);
     text-transform: uppercase;
     border-radius: .5rem;
     border: none;
@@ -233,7 +233,7 @@ img {
       background-color: var(--naranja);
   }
   .menu-sitio .menu a {
-      font-family: var (--fuenteHeadings);
+      font-family: var(--fuenteHeadings);
       text-transform: uppercase;
       color: var(--negro);
       padding: 1rem;
@@ -443,4 +443,84 @@ img {
 }
 .widget a:hover {
     color: var(--naranja);
+}
+
+/** Comentaios **/
+.comentarios h3 {
+    font-weight: 700;
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .comentarios {
+      width: 60%;
+    }
+}
+.comentarios a {
+    color: var(--rojo);
+}
+.comentarios .logged-in-as {
+    display: flex;
+    justify-content: center;
+}
+.comentarios .logged-in-as a:last-of-type {
+    margin-left: 2rem;
+}
+.comment-form p.comment-notes {
+    display: block;
+    text-align: center;
+}
+.comment-form p {
+    display: flex;
+    flex-wrap: wrap;
+}
+.comment-form p label {
+    flex: 0 0 100%;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .comment-form p label
+      text-align: right;
+      flex: 0 0 20rem;
+}
+.comment-form input:not([type="submit"]),
+.comment-form textarea {
+    flex: 1;
+    border: 1px solid var(--grisClaro);
+    padding: 1rem;
+}
+.comment-form-cookies-consent {
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+p.comment-form-cookies-consent label {
+    flex: 1 1 auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.form-submit {
+    display: flex;
+    justify-content: center;
+}
+.lista-comentarios .comment {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: #f6f6f6;
+    border-bottom: .5rem solid var(--rojo);
+}
+.lista-comentarios .comment cite {
+    color: var(--rojo);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.lista-comentarios .comment .comment-author {
+     margin-bottom: 2rem;
+}
+.lista-comentarios .comment .comment ul.children li {
+    background-color: var(--blanco);
+    margin-top: 2rem;
+    border: none;
+
 }
